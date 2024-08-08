@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="js-teste/lib-teste.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Web Components</title>
+  </head>
+  <body class="container">
+    <h1 class="text-center my-4">Web Components Demo</h1>
+
+    <div class="component-container">
+      <h2>Pop-up Info Widget</h2>
+      <form>
+        <div>
+          <label for="cvc1"
+            >Enter your CVC
+            <popup-info
+              img="img/alt.png"
+              data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."
+            >
+            </popup-info>
+          </label>
+          <input type="text" id="cvc1" class="form-control" />
+        </div>
+      </form>
+
+      <form>
+        <div>
+          <label for="cvc2"
+            >Enter your CVC
+            <popup-info
+              data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."
+            >
+            </popup-info>
+          </label>
+          <input type="text" id="cvc2" class="form-control" />
+        </div>
+      </form>
+    </div>
+
+    <div class="component-container">
+      <h2>Expanding List</h2>
+      <ul is="expanding-list">
+        <li>
+          UK
+          <ul>
+            <li>
+              Yorkshire
+              <ul>
+                <li>
+                  Leeds
+                  <ul>
+                    <li>Train station</li>
+                    <li>Town hall</li>
+                    <li>Headrow</li>
+                  </ul>
+                </li>
+                <li>Bradford</li>
+                <li>Hull</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          USA
+          <ul>
+            <li>
+              California
+              <ul>
+                <li>Los Angeles</li>
+                <li>San Francisco</li>
+                <li>Berkeley</li>
+              </ul>
+            </li>
+            <li>Nevada</li>
+            <li>Oregon</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>Not</li>
+        <li>an</li>
+        <li>expanding</li>
+        <li>list</li>
+      </ul>
+    </div>
+
+    <div class="component-container">
+      <h2>Star Rater</h2>
+      <star-rater></star-rater>
+    </div>
+
+    <div class="component-container">
+      <h2>Circle Component</h2>
+      <meu-circulo texto="comp. #01" cor="green"></meu-circulo>
+      <meu-circulo texto="comp. #02"></meu-circulo>
+    </div>
+
+    <div class="component-container">
+      <h2>Title and Button Components</h2>
+      <pw-title>Que Maravilha</pw-title>
+      <pw-button>Que show de bola!</pw-button>
+    </div>
+
+    <div class="component-container">
+      <h2>Custom Button Component</h2>
+      <app-botao>
+        <span slot="texto">Algum texto</span>
+      </app-botao>
+      <app-botao>
+        <span slot="texto">Algum texto</span>
+      </app-botao>
+    </div>
+  </body>
+</html>
